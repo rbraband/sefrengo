@@ -1,0 +1,51 @@
+Legend:
++ -> Addition
+^ -> Change
+- -> Removed
+# -> Bug Fix
+! -> Note
+
+Aktuelle Versionsnummer ist 01.09.93 (Sefrengo 2.0.0 beta3) - veröffentlicht 16.04.2012
+------------------------------------------------------------------------------------------------
+# Bugfixes (siehe http://community.sefrengo.org/tracker/project-3-sefrengo-core/)
+^ Modulupdates
+  + Contentflex 2.0.4
+  + Listen-Navigation 2.0.2
+  + Kontaktformular 3.0.2
+  + Login 3.0.2
+
+
+Current version number is 01.09.92 (Sefrengo 2.0.0 beta2) - released 24.02.2012
+------------------------------------------------------------------------------------------------
+# bugfixes (see http://community.sefrengo.org/tracker/project-3-sefrengo-core/)
++ new session lib
+^ modulupdates
+  + contentflex 2.0.3
+  + textfeld 2.0.1
+  + textarea 2.0.1
+  + wysiwyg 2.0.1
+
+
+Current version number is 01.09.91 (Sefrengo 2.0.0 beta) - released 23.12.2011
+------------------------------------------------------------------------------------------------
++ Added API with several packages e.g. MODEL, VIEW, CONTROLLER, ...
+	! Moved old API to /API/DEPRECATED/ and is still accessible at the moment 
++ Added new areas as API classes: Fm.php, Js.php, Css.php, Logs.php, Ds.php
+- Removed old areas in /inc/: inc.upl.php, inc.js.php, inc.css.php
+^ Moved language files to /backend/lang/
++ Introduced jQuery v1.7.1 and jQuery UI v1.8.6 as standard JavaScript library
+	- Removed nearly all old JS files
+	+ Added many jQuery plugins
+	+ Introducing own Sefrengo JS plugins
+^ Introduced the CKEditor v3.6.2
+	- Removed the FCKEditor
+^ Updated the adodb to v5.14 for PHP5
+^ Updated multiple PHP Pear classes
++ Added phpThumb library v1.7.11 for image generation
++ Added CodeMirror v2.18 as JS source code editor
+  - Removede sourcepad editor
++ Introduced new logger for backend and frontend
+^ Moved events from cms_values to new table cms_events
++ Moved frontend code to API
++ Rewrote client and cms settings
+

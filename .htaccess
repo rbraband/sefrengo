@@ -1,0 +1,36 @@
+Options +FollowSymLinks
+RewriteEngine On
+#RewriteBase /
+
+#
+# ERROR DOCUMENTS - define their if you want
+#
+
+# ErrorDocument 404 /my-error-page.html
+# ErrorDocument 401 /my-error-page.html
+# ErrorDocument 403 /my-error-page.html
+# ErrorDocument 500 /my-error-page.html
+# ErrorDocument 400 /my-error-page.html
+
+
+
+#
+# Sefrengo numeric rewrite
+#
+
+#cats
+RewriteRule ^cat([0-9][0-9]*)-([1-9][0-9]?)\.html(&.*)? index.php?lang=$2&idcat=$1&$3 [QSA,L]
+RewriteRule ^cat([1-9][0-9]*)\.html(&.*)? index.php?idcat=$1&$2 [QSA,L]
+#pages
+RewriteRule ^page([1-9][0-9]*)-([1-9][0-9]?)\.html(&.*)? index.php?lang=$2&idcatside=$1$3 [QSA,L]
+RewriteRule ^page([1-9][0-9]*)\.html(&.*)? index.php?idcatside=$1$2 [QSA,L]
+
+
+
+#
+# Sefrengo 'spoken url support' rewrite
+#
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?sf_rewrite=$1 [L,QSA]
